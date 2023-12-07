@@ -4,37 +4,48 @@ name = input()
 print ("witaj " + name) 
 
 life = 100 
-mana = 200 
-money = 700
+mana = 300 
+money = 500
 
 print(f"Masz {life} HP  {mana} many i {money} pięniędzy ")
 
 print("Aby zagrać wybierz poziom trudności")
 
-print ("--1. łatwy--")
-print ("--2. Normalny--")
-print("--3. Trudny--")
+print ("1. bardzolatwy")
+print ("2. latwy")
+print ("3. sredni")
+print("4. trudny")
+print ("5. bardzotrudny")
 
 trudność = input("Wybierz poziom trudności ")
 
 if trudność == '1':
-    print("wybrałeś poziom łatwy kliknj 1 aby rozpocząć rozgrywke")
-    życia = 3
+    print("wybrałeś poziom bardzolatwy kliknj 1 aby rozpocząć rozgrywke")
+    życia = 5
 elif trudność == "2":
-    print("wybrałeś poziom Normalny kliknj 2 aby rozpocząć rozgrywke")
-    życia = 2
+    print("wybrałeś poziom latwy kliknj 2 aby rozpocząć rozgrywke")
+    życia = 4
 elif trudność == "3":
+    życia = 3
+    print("wybrałeś poziom sredni kliknj 3 aby rozpocząć rozgrywke")
+elif trudność == "4":
+    życia = 2
+    print("wybrałeś poziom trudny kliknj 4 aby rozpocząć rozgrywke")
+elif trudność == "5":
     życia = 1
-    print("wybrałeś poziom Trudny kliknj 3 aby rozpocząć rozgrywke")
-
-
+    print("wybrałeś poziom bardzotrudny kliknj 5 aby rozpocząć rozgrywke")
 gra = input("Omówienie ")
+
 if gra == "1":
-    print("Witaj aby wygrać musisz dokonywać własciwych wyborów jeśli wybierzesz źle tracisz życie na poziomie łatwtym masz 2 życia będziessz miał/a do wyboru od 2 do 4 opcji jeśli wybierzesz tracisz hp ")
+    print("Witaj aby wygrać musisz dokonywać własciwych wyborów jeśli wybierzesz źle tracisz życie na poziomie bardzolatwtym masz 5 życia będziesz miał do wyboru od 2 do 4 opcji jeśli wybierzesz tracisz hp ")
 if gra == "2":
-    print("Witaj aby wygrać musisz dokonywać własciwych wyborów jeśli wybierzesz źle tracisz życie na poziomie Normalnym masz 2 życia będziessz miał/a do wyboru od 2 do 4 opcji jeśli wybierzesz tracisz hp ")
+    print("Witaj aby wygrać musisz dokonywać własciwych wyborów jeśli wybierzesz źle tracisz życie na poziomie latwym masz 4 życia będziesz miał do wyboru od 2 do 4 opcji jeśli wybierzesz tracisz hp ")
 if gra == "3":
-    print("Witaj aby wygrać musisz dokonywać własciwych wyborów jeśli wybierzesz źle tracisz życie na poziomie Trudnym masz 1 życia będziessz miał/a do wyboru od 2 do 4 opcji jeśli wybierzesz tracisz hp  ")
+    print("Witaj aby wygrać musisz dokonywać własciwych wyborów jeśli wybierzesz źle tracisz życie na poziomie sredni masz 3 życia będziesz miał do wyboru od 2 do 4 opcji jeśli wybierzesz tracisz hp  ")
+if gra == "4":
+    print("Witaj aby wygrać musisz dokonywać własciwych wyborów jeśli wybierzesz źle tracisz życie na poziomie trudnym masz 2 życia będziesz miał do wyboru od 2 do 4 opcji jeśli wybierzesz tracisz hp  ")
+if gra == "5":
+    print("Witaj aby wygrać musisz dokonywać własciwych wyborów jeśli wybierzesz źle tracisz życie na poziomie bardzotrudnym masz 1 życia będziesz miał do wyboru od 2 do 4 opcji jeśli wybierzesz tracisz hp  ")
 
 
 print (" kliknij 1 aby zapoznać się z fabułą gry")
@@ -46,91 +57,69 @@ if start == "1":
 
 
 
-print(name  + "jesteś podczas konnej wyprawy, atakuje cie zmutowany wilk oto twoje opcje ")
-print("-1- walczysz z wikiem")
-print("-2- jedziesz inną drogą")
-print("-3- omijasz go jadąc przez las")
+print(name  + "jesteś podczas kolejnej wyprawy, atakuje cie  lis oto twoje opcje ")
+print("1- walczysz z lisem")
+print("2- omijasz go jadąc przez las")
 
 decyzja = input("podejmij decyzje ")
 
 if decyzja == "1":
-    print("wygrałeś i sprzedałeś skóre wilka  masz teraz ")
-    life -= 16
-    mana -= 30
-    money += 120
-
-elif decyzja =="2":
-    print("spotykasz na innej drodze bandytów którzy ukradli ci 200 monet ale poobijany i zmęczony uciekłeś")
-    life -= 24
-    mana -= 70
-    money -= 200
-
-elif  decyzja =="3":
-    print("w lesie znajdujesz worek z mnetami ale kaleczysz się o ciernie więc tracisz hp")
+    print("wygrałeś i sprzedałeś skóre lisa  masz teraz ")
     life -= 10
-    money += 150
+    mana -= 20
+    money += 100
+
+
+elif  decyzja =="2":
+    print("w lesie znajdujesz monety ale kaleczysz się o krzak więc tracisz hp")
+    life -= 20
+    money += 100
 
 print(f"Masz {life} HP  {mana} many i {money} pięniędzy ")
 
 print( name  + " przejerzdżasz obok wioski (muszisz jechać do sklepu)")
-print("-1- jedziesz do sklepu")
+print("1- jedziesz do sklepu")
 decyzja = input("zdecyduj się")
 if decyzja == "1":
     print("możesz kupić następujące towary")
     
-    print("--1. woda")
-    print("--2. chleb")
-    print("--3. jabłko")
-    print("--4. mikstura_zdrowia")
-    print("--5. mikstura_siły")
-    print("--6. tarcza")
-    print("--7. zbroja")
-    print("--8. mityczna broń której potrzebujesz aby pokonać mroczne potwory")
+    print("1. mikstura_zdrowia")
+    print("2. mikstura_siły")
+    print("3. tarcza")
+    print("4. zbroja")
+    print("5. mityczna broń ktora mozesz  pokonać  potwory")
     print("możesz  kupić tylko 1 rzecz")
 
     zakupy = input("wybierz co chesz kupić")
+      
+if zakupy == "1":
+      life+=30
+      money-=50
+if zakupy == "2":
+     mana+=20 
+     money-=60
 
-    if zakupy == "1":
-     life+=8   
-     money-=10
+if zakupy == "3":
+     life+= 30 
+     money-=120
 
-    if zakupy == "2":
-     life+=11  
-     money-=13
+if zakupy == "4":
+     life+= 20 
+     money -=150
 
-    if zakupy == "3":
-     life+=9  
-     money-=7
+if zakupy == "5":
+     money-=300
 
-    if zakupy == "4":
-     life+=20  
-     money-=30
-
-    if zakupy == "5":
-     mana+=30 
-     money-=40
-
-    if zakupy == "6":
-     life+= 40 
-     money-=100
-
-    if zakupy == "7":
-     life+= 60 
-     money -=190
-
-    if zakupy == "8":
-     money-=500
-
-    print(f"Masz {life} HP  {mana} many i {money} pięniędzy ")
+print(f"Masz {life} HP  {mana} many i {money} pięniędzy ")
 
 
 print(f"Masz {life} HP  {mana} many i {money} pięniędzy ")
 
 
-print( name +" wyjechałeś z wioski ale kiedy przejerzdrzałeś przez most zaatakował cię smok morski")
-print("--1. (jeśli nie masz legendarnego miecza) Walczysz ze smokiem w sposób tradycyjny")
-print("--2. (jeśli masz legendarny miecz) Ciskasz w smoka mieczem ")
-print("--3. uciekasz ")
+print( name +" wyjechałeś z wioski ale kiedy przejerzdrzałeś przez most zaatakował cię smok ")
+print("1. (jeśli nie masz mitycznego miecza) walczysz ze smokiem w sposób tradycyjny")
+print("2. (jeśli masz legendarny miecz) walczysz ze smokiem mitycznym mieczem  ")
+print("3. uciekasz ")
 
 if zakupy =="8":
    print("Masz miecz")
@@ -140,21 +129,21 @@ if zakupy !="8":
 decyzja = input("podejmij decyzje")
 
 if decyzja =="1":
-   print("wygrywasz walke jednak tracisz 25 HP")
-   life -= 25
+   print("wygrywasz walke ale tracisz 50 HP")
+   life -= 50
    money += 300
-   mana += 0
+   mana += 20
 
 elif decyzja =="2":
    print("wygrywasz walke i nie tracisz HP ponieważ zabiłeś smoka za jednym ciosem")
    life += 0
-   money +=350
+   money +=300
    mana += 20
 
 elif decyzja =="3":
    life -= 200
-   money -=100
-   mana -= 100
+   money -=200
+   mana -= 50
    if trudność =="3":
     print("Przegrałeś Koniec Gry!!!")
     quit()
@@ -166,10 +155,10 @@ if trudność !="3":
 
 print(f"Masz {life} HP  {mana} many i {money} pięniędzy ")
 
-print(name + " po walce ze smokiem dotarłeś do magicznego miejsca gdzie wymieniłeś skóre smoka na leczniczą miksture oraz dostałeś do wyboru 3 mittyczne przedmioty (możesz wybrać jeden) ")
-print("--1. Zbroja z smoczych łósek")
-print("--2. Topór wykuty w czeluściach góry irana")
-print("--3. Kusze automatyczną króla kerena")
+print(name + " po walce ze smokiem dotarłeś do magicznego miejsca gdzie wymieniłeś skóre smoka na leczniczą miksture oraz dostałeś do wyboru 3 mityczne przedmioty (możesz wybrać jeden) ")
+print("1. Zbroja z smoczych łósek")
+print("2. Topór wykuty w czeluściach góry irana")
+print("3. Kusze automatyczną króla kerena")
 
 life += 80 
 print(f"Masz {life} HP  {mana} many i {money} pięniędzy ")
@@ -186,22 +175,22 @@ elif oręż =="2":
 elif oręż =="3":
    print("posiadasz mityczną Kusze")
 
-print("opuszczasz magiczną wioskke i chwile po rozpoczęciu podróży atakuje cie grupa mrocznych potworów (jest ich 3)")
+print("opuszczasz  wioske i chwile po rozpoczęciu podróży atakuje cie grupa bandytow(jest ich 3)")
 
 
-print("--1. defensywa")
-print("--2. ofensywa ")
+print("1. defensywa")
+print("2. ofensywa ")
 
 walka = input("wybierz sposób walki")
 
 if walka =="1":
-   print("zostajesz zaatakowany przez 3 potwory na raz udaje ci się jednego zabic zadają ci 80 dmg")
-   life -= 80
+   print("zostajesz zaatakowany przez 3 bandytow na raz udaje ci się jednego zabic zadają ci 50 hp")
+   life -= 50
    mana -= 30
 elif walka =="2":
-   print("potwory nie spodziewają się ataku z twojesj strony zabijasz jednego i nie otrzymujesz obrażeń")
+   print("bandyci nie spodziewają się ataku z twojej strony zabijasz jednego i nie otrzymujesz obrażeń")
    life -= 0
-   mana -= 10
+   mana -= 15
 print(f"Masz {life} HP  {mana} many i {money} pięniędzy ")
 
 if oręż !="1":
@@ -224,30 +213,30 @@ print("--3 wykorzystujesz mityczną Kusze ")
 walka2 = input("kontynuacja walki")
 
 if walka2 =="1":
-   print("otrzymujesz 100 hp a potwory zadały ci 50 zanim je zabiłeeś")
-   life += 100
-   life -= 50
-   mana -= 15
+   print("otrzymujesz 120 hp a bandyci zadali ci 80 zanim je zabiłeeś")
+   life += 120
+   life -= 80
+   mana -= 20
    money += 70
 
 elif walka2 =="2":
-   print("atakujesz potwory wymachując toporem zabijasz je i otrzymujesz 100 Hp")
+   print("atakujesz bandytow  toporem zabijasz je i otrzymujesz 100 Hp")
    life += 100
-   mana -= 20
-   money += 100
+   mana -= 15
+   money += 110
 
 elif walka2 =="3":
-   print("posyłasz w potwory salwe z kuszy zabijasz je bez otrzymania obrażeń")
-   money += 100
+   print("posyłasz w bandytow salwe z kuszy zabijasz je bez otrzymania obrażeń")
+   money += 150
    life += 0
-   mana -= 10
+   mana -= 20
 
 print(f"Masz {life} HP  {mana} many i {money} pięniędzy ")
 
 print("brawo pokonałeś podwładnych czarnoksiężnika lecz aby go pokonać musisz odnaleść zaklęcie (gdzie szukasz?)")
 
-print('--1. przeszukujesz kosmiczny las')
-print("--2. przeszukujesz magiczny dom")
+print('1. przeszukujesz kosmiczny las')
+print("2. przeszukujesz magiczny dom")
 poszukiwanie = input("")
 
 
@@ -255,36 +244,35 @@ if poszukiwanie =="2":
    print("brawo masz zaklęcie")
    
 elif poszukiwanie =="1":
-   print("--2. spróbuj jeszce raz tutaj nie znajdziesz tego czego szukasz")
+   print("2. spróbuj jeszce raz tutaj nie znajdziesz tego czego szukasz")
    poszukiwanie = input("druga próba")
 if poszukiwanie =="2":
    print("brawo masz zaklęcie")
 
-print("Czeka cie ostateczna bitwa idziesz do zamku czarnoksiężnika gdzie on już czeka na ciebie z małą armią")
-print("--1. urzywasz zaklęcia i pokonujesz armie carnoksiężnika")
-print("--2. nie urzywasz zaklęcia i atakujesz bronią")
+print("Czeka cie ostateczna bitwa idziesz do zamku czarnoksiężnika ")
+print("1. urzywasz zaklęcia i go pokonujesz")
+print("2. nie urzywasz zaklęcia i atakujesz bronią")
 
 Ostatnia_walka = input("jak postąpisz?")
 
 if Ostatnia_walka =="1":
-   print("Zabiłeś potwory ale czrnoksięznik przerzył")
+   print("Zabiłeś  czarnoksięznika")
    life -= 0
    mana -= 50
    money += 300
+
 elif Ostatnia_walka =="2":
    life -=1000
    mana -=100
    print("Umarłeś koniec gry")
    quit()
 
-print("czarnoksiężnik wyzywa cie do pojedynku (ZAKOŃCZENIE)")
-print("--1. atakujesz go z całą mocą")
-zakończenie = input("wykończ czarnoksiężnika")
-
+zakończenie = input("zabiles czarnoksięznika")
 if zakończenie =="1":
-   print("Gratulacje Zabiłeś czarnoksiężnika i uratowałeś świat ludzkość jest z ciebie dumna ")
+   
+   print("Gratulacje Zabiłeś czarnoksiężnika ")
    money += 1000
    mana -= 30
    life -= 25
-   print(f"Masz {life} HP  {mana} many i {money} pięniędzy oto twój now rekord!!!!! ")
+   print(f"Masz {life} HP  {mana} many i {money} pięniędzy oto twój nowy rekord!!!!! ")
 print("KONIEC GRY!!!!")
